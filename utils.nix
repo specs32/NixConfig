@@ -6,11 +6,11 @@
 
   programs.git = {
     enable = true;
-    config = {
-      user.name = "specs32";
-      user.email = "nicoandmomo@gmail.com";
-      init.defaultBrach = "main";
-      pull.rebase = true;
+     config = {
+       user.name = "specs32";
+       user.email = "nicoandmomo@gmail.com";
+       init.defaultBranch = "main";
+       pull.rebase = true;
     };
 
   };
@@ -44,6 +44,6 @@
     hunspellDicts.en_US
     hunspellDicts.de_DE
     qt6.full
-    ];
+  ];
 
 }
