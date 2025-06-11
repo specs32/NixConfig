@@ -1,8 +1,9 @@
 # NixConfig
 Nix Config v4
 
+## System Infomation
 
-System:
+``System:
   Host: Oumuamua Kernel: 6.15.0 arch: x86_64 bits: 64
   Desktop: KDE Plasma v: 6.3.5 Distro: NixOS 25.11 (Xantusia)
 Machine:
@@ -61,4 +62,4 @@ Sensors:
 Info:
   Memory: total: 28 GiB note: est. available: 29 GiB used: 3.02 GiB (10.4%)
   Processes: 356 Uptime: 0h 2m Shell: fish inxi: 3.3.38
-
+``
