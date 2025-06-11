@@ -3,6 +3,8 @@ Nix Config v4
 
 This needs debugging though ...
 
+Adjust Hostname in net.nix and further Settings in vpn.nix, nix-settings.nix, etc .. 
+
 ## System Infomation
 
 ````
