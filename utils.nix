@@ -16,7 +16,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-
+    nil
     stdenv
     gcc
     gnumake
@@ -45,6 +45,7 @@
     hunspellDicts.en_US
     hunspellDicts.de_DE
     qt6.full
+    kdePackages.filelight
   ];
 
 }
