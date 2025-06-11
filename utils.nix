@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -28,9 +28,6 @@
     avrdude
     arduino-ide
     lm_sensors
-    qemu
-    qemu-utils
-    qemu_full
     usbutils
     obs-studio
     inxi
@@ -38,7 +35,6 @@
     mesa-demos
     sddm-astronaut
     kdePackages.qtmultimedia
-    openrgb-with-all-plugins
     nmap
     libreoffice-qt
     hunspell
