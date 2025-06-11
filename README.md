@@ -1,6 +1,8 @@
 # NixConfig
 Nix Config v4
 
+This needs debugging though ...
+
 ## System Infomation
 
 ````
