@@ -67,4 +67,6 @@
     enable = true;
   };
 
+  services.logind.extraConfig = "RuntimeDirectorySize=8G";
+
 }

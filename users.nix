@@ -1,9 +1,9 @@
 { config,  pkgs, ... }:
 
 {
-   users.users.bob = {
+    users.users.bob = {
     isNormalUser = true;
-    description = "bob";
+    description = "Bob";
     extraGroups = [ "libvirtd" "networkmanager" "audio" "video" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
@@ -18,15 +18,22 @@
       tdesktop
       gpu-viewer
       steam
-      
     ];
-
-
-
   };
 
-  # Change runtime directory size
-  services.logind.extraConfig = "RuntimeDirectorySize=8G";
-
+#     users.users.peter = {
+#     isNormalUser = true;
+#     description = "Peter";
+#     extraGroups = [ "libvirtd" "networkmanager" "audio" "video" ];
+#     packages = with pkgs; [
+#       kdePackages.kate
+#       thunderbird
+#       brave
+#       haruna
+#       tdesktop
+#       gpu-viewer
+#       steam
+#     ];
+#   };
 
 }
