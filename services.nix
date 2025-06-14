@@ -5,11 +5,13 @@
   services.udev.enable = true;
 
   services.openvpn.servers = {
-    AirVPN  = {
-      config = '' config /root/AirVPN.ovpn '';
+    AirVPNMerkent  = {
+      config = ''config /root/AirVPN.ovpn '';
       updateResolvConf = true;
     };
   };
+
+
 
   services.xserver.enable = true;
 

@@ -18,6 +18,9 @@
       tdesktop
       gpu-viewer
       steam
+      qutebrowser
+      openrgb-with-all-plugins
+
     ];
   };
 
