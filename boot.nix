@@ -2,7 +2,7 @@
 
 {
   system.nixos.label = "Bob";
-  #adjust -
+  #adjust --
   boot = {
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
