@@ -1,23 +1,32 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  # boot.extraModulePackages = [ config.boot.kernelPackages.zenpower ];
-  # boot.blacklistedKernelModules = [ "k10temp" ];
-  boot.kernelModules = [
-    "nct6775"
-    # "zenpower"
-  ];
+  system.nixos.label = "Bob";
+  #adjust -
+  boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+    initrd.enable = true;
+    initrd.verbose = false;
+    initrd.systemd.enable = true;
+    initrd.availableKernelModules = [ "amdgpu" ];
+    initrd.kernelModules          = [ "amdgpu" ];
+    kernelPackages = pkgs.linuxPackages_latest;
+    kernelModules = [ "nct6775" ];
+    consoleLogLevel = 3;
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "udev.log_priority=3"
+      "rd.systemd.show_status=auto"
+      ];
+    loader.timeout = 0;
 
-  boot.kernelParams = [
-    "amd_pstate=active"
-  ];
-
-
-
-
-
+     plymouth = {
+       enable = true;
+       font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
+       themePackages = [ pkgs.nixos-bgrt-plymouth ];
+     };
+  };
 }
