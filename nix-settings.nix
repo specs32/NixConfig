@@ -9,4 +9,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  zramSwap.enable = true;
+
+
 }

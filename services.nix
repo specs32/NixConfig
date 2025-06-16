@@ -26,6 +26,13 @@
   services.desktopManager.plasma6.enable = true;
 
   services.printing.enable = true;
+#   services.avahi = {
+#     enable = true;
+#     nssmdns4 = true;
+#     openFirewall = true;
+#   };
+
+  environment.systemPackages = with pkgs; [ samsung-unified-linux-driver ];
 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
