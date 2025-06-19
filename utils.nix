@@ -37,6 +37,7 @@
     mesa-demos
     sddm-astronaut
     kdePackages.qtmultimedia
+    kdePackages.kcalc
     nmap
     libreoffice-qt
     hunspell

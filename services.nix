@@ -14,6 +14,8 @@
 
 
   services.xserver.enable = true;
+  services.xserver.videoDrivers = ["amdgpu"];
+
 
   location.provider = "geoclue2";
   services.geoclue2.enable = true;
