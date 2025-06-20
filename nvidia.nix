@@ -1,6 +1,7 @@
 { config, lib, ... }:
 
 {
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
 

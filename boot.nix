@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
-  #system.nixos.label = "Bob";
+  system.nixos.label = "Bob";
   #adjust --
   boot = {
     loader.systemd-boot.enable = true;
