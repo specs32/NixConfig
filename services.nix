@@ -1,17 +1,18 @@
-{ pkgs, ... }:
+{ pkgs, config, lib, ... }:
 
 {
 
-  services.udev.enable = true;
+#  services.openvpn.servers = {
+#    AirVPN  = {
+#      config = ''config /home/bob/.config/VPN/AirVPN.ovpn '';
+#      updateResolvConf = true;
+#    };
+#  };
 
-  services.openvpn.servers = {
-    AirVPN  = {
-      config = ''config /home/bob/.config/VPN/AirVPN.ovpn '';
-      updateResolvConf = true;
-    };
-  };
+
 
   services.xserver.enable = true;
+  services.xserver.videoDrivers = ["nvidia"];
 
   location.provider = "geoclue2";
   services.geoclue2.enable = true;
@@ -24,15 +25,9 @@
   services.desktopManager.plasma6.enable = true;
 
   services.printing.enable = true;
-#   services.avahi = {
-#     enable = true;
-#     nssmdns4 = true;
-#     openFirewall = true;
-#   };
-
-  environment.systemPackages = with pkgs; [ samsung-unified-linux-driver ];
 
   services.pulseaudio.enable = false;
+
   security.rtkit.enable = true;
 
   services.pipewire = {
@@ -45,17 +40,12 @@
   powerManagement = {
     enable = true;
     cpuFreqGovernor = "powersave";
-    cpufreq = {
-      max = 5000000;
-      min = 600000;
-    };
   };
-
-
 
   services.power-profiles-daemon.enable = true;
 
   services.fwupd.enable = true;
+
 
   systemd.services.fancontrol = {
     enable = true;

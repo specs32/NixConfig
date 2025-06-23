@@ -1,7 +1,10 @@
 { config, lib, ... }:
 
 {
-  services.xserver.videoDrivers = [ "nvidia" ];
+  # Load nvidia driver for Xorg and Wayland
+
+  # Enable access to nvidia from containers (Docker, Podman)
+  # hardware.nvidia-container-toolkit.enable = true;
 
   hardware.nvidia = {
 

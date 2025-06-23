@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, lib, ... }:
 
 {
 
@@ -19,9 +19,6 @@
 
   environment.systemPackages = with pkgs; [
     nil
-    stdenv
-    gcc
-    gnumake
     gh
     nh
     nix-output-monitor
@@ -37,7 +34,6 @@
     mesa-demos
     sddm-astronaut
     kdePackages.qtmultimedia
-    kdePackages.kcalc
     nmap
     libreoffice-qt
     hunspell
@@ -45,6 +41,7 @@
     hunspellDicts.de_DE
     qt6.full
     kdePackages.filelight
+    kdePackages.kcalc
   ];
 
 }
